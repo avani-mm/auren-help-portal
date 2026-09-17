@@ -1,0 +1,967 @@
+/* =========================================
+   AUREN — HELP PORTAL
+   Main stylesheet
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #020817;
+  color: #ffffff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.auren-app {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(0, 183, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 10% 50%, rgba(0, 90, 255, 0.08), transparent 30%),
+    #020817;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(2, 8, 23, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.logo-symbol {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #36d9ff;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #36d9ff;
+  box-shadow: 0 0 18px rgba(54, 217, 255, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+  color: #9baabd;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #36d9ff;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(54, 217, 255, 0.5);
+  background: rgba(54, 217, 255, 0.08);
+  color: #ffffff;
+  padding: 11px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: rgba(54, 217, 255, 0.18);
+  box-shadow: 0 0 25px rgba(54, 217, 255, 0.2);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 7% 70px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-background-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.orb-one {
+  width: 450px;
+  height: 450px;
+  right: -120px;
+  top: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 190, 255, 0.17),
+    transparent 70%
+  );
+}
+
+.orb-two {
+  width: 400px;
+  height: 400px;
+  left: -180px;
+  bottom: -150px;
+  background: radial-gradient(
+    circle,
+    rgba(28, 76, 255, 0.12),
+    transparent 70%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #36d9ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(70px, 10vw, 150px);
+  line-height: 0.85;
+  letter-spacing: -7px;
+  margin-bottom: 25px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 20%,
+    #72e7ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+  max-width: 650px;
+  font-size: clamp(30px, 4vw, 55px);
+  line-height: 1.08;
+  font-weight: 500;
+  color: #dce8f5;
+}
+
+.hero h2 span,
+.section-heading span,
+.personality-box h2 span,
+.mission-section h2 span {
+  color: #36d9ff;
+}
+
+.hero-description {
+  max-width: 570px;
+  margin-top: 25px;
+  color: #8e9caf;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.primary-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 21px;
+  border-radius: 8px;
+  background: #36d9ff;
+  color: #00111b;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 0 25px rgba(54, 217, 255, 0.2);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(54, 217, 255, 0.4);
+}
+
+.secondary-button {
+  padding: 13px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #b9c5d4;
+  transition: 0.3s;
+}
+
+.secondary-button:hover {
+  border-color: #36d9ff;
+  color: #36d9ff;
+}
+
+
+/* =========================================
+   AUREN CHARACTER
+   ========================================= */
+
+.hero-visual {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(25px);
+}
+
+.auren-character {
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+  max-width: 700px;
+  max-height: 720px;
+
+  object-fit: contain;
+
+  /* THIS makes the character visibly bigger */
+  scale: 1.35;
+
+  filter:
+    brightness(1.18)
+    contrast(1.1)
+    drop-shadow(0 0 35px rgba(40, 210, 255, 0.65))
+    drop-shadow(0 0 80px rgba(40, 150, 255, 0.35))
+    drop-shadow(0 25px 45px rgba(0, 0, 0, 0.65));
+}
+
+.character-glow {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: rgba(0, 210, 255, 0.16);
+  filter: blur(70px);
+  z-index: 1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+.character-status {
+  position: absolute;
+  right: 3%;
+  bottom: 12%;
+  z-index: 6;
+  padding: 10px 15px;
+  border: 1px solid rgba(54, 217, 255, 0.3);
+  background: rgba(3, 16, 34, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 6px;
+  color: #a8b8c9;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #36d9ff;
+  box-shadow: 0 0 10px #36d9ff;
+  animation: statusBlink 1.5s infinite;
+}
+
+@keyframes statusBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 25px;
+  left: 7%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #607084;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.scroll-indicator div {
+  width: 60px;
+  height: 1px;
+  background: #36d9ff;
+}
+
+
+/* =========================================
+   COMMON SECTION
+   ========================================= */
+
+.story-section,
+.powers-section,
+.personality-section,
+.mission-section {
+  position: relative;
+  padding: 120px 7%;
+}
+
+.section-number {
+  position: absolute;
+  top: 60px;
+  right: 7%;
+  color: rgba(54, 217, 255, 0.25);
+  font-size: 80px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   STORY
+   ========================================= */
+
+.story-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.2fr;
+  gap: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-heading h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.story-content {
+  max-width: 620px;
+  color: #8e9caf;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.story-content p + p {
+  margin-top: 22px;
+}
+
+.quote {
+  margin-top: 35px;
+  padding: 25px;
+  border-left: 2px solid #36d9ff;
+  color: #d9e8f4;
+  font-size: 18px;
+  font-style: italic;
+  background: rgba(54, 217, 255, 0.03);
+}
+
+
+/* =========================================
+   POWERS
+   ========================================= */
+
+.powers-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.powers-section .section-heading {
+  margin-bottom: 60px;
+}
+
+.powers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.power-card {
+  position: relative;
+  min-height: 270px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: 0.35s;
+  overflow: hidden;
+}
+
+.power-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(54, 217, 255, 0.4);
+  background: rgba(54, 217, 255, 0.05);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.power-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #36d9ff;
+  border: 1px solid rgba(54, 217, 255, 0.25);
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.power-number {
+  position: absolute;
+  top: 28px;
+  right: 25px;
+  color: #526173;
+  font-size: 12px;
+}
+
+.power-card h3 {
+  font-size: 19px;
+  margin-bottom: 13px;
+}
+
+.power-card p {
+  color: #7f8da0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   PERSONALITY
+   ========================================= */
+
+.personality-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.personality-box {
+  max-width: 1200px;
+  margin: auto;
+  padding: 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  border: 1px solid rgba(54, 217, 255, 0.15);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(54, 217, 255, 0.08),
+      transparent 40%
+    ),
+    rgba(255, 255, 255, 0.025);
+}
+
+.personality-box h2 {
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.personality-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.personality-list div {
+  padding: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b7c5d5;
+}
+
+
+/* =========================================
+   MISSION
+   ========================================= */
+
+.mission-section {
+  text-align: center;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mission-section .eyebrow {
+  justify-content: center;
+}
+
+.mission-section h2 {
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.mission-text {
+  max-width: 600px;
+  margin: 30px auto;
+  color: #8997a9;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  min-height: 130px;
+  padding: 35px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: #667386;
+  font-size: 12px;
+}
+
+footer .logo {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CHATBOT
+   ========================================= */
+
+.chat-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+.chat-window {
+  width: min(430px, 100%);
+  height: min(650px, 85vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(54, 217, 255, 0.3);
+  border-radius: 18px;
+  background: #061326;
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(54, 217, 255, 0.08);
+}
+
+.chat-header {
+  min-height: 75px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chat-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-hero-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #36d9ff;
+  border-radius: 50%;
+  color: #36d9ff;
+  font-weight: 800;
+  box-shadow: 0 0 15px rgba(54, 217, 255, 0.2);
+}
+
+.chat-header strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.chat-header small {
+  color: #36d9ff;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.close-chat {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #8d9bad;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.close-chat:hover {
+  color: #36d9ff;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 90%;
+  padding: 15px;
+  border-radius: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.hero-message {
+  background: rgba(54, 217, 255, 0.08);
+  border: 1px solid rgba(54, 217, 255, 0.12);
+  color: #d5e3ef;
+}
+
+.hint-message {
+  margin-top: 15px;
+  color: #66778c;
+  font-size: 11px;
+}
+
+.chat-input {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+}
+
+.chat-input input::placeholder {
+  color: #647286;
+}
+
+.chat-input input:focus {
+  border-color: rgba(54, 217, 255, 0.5);
+}
+
+.chat-input button {
+  width: 45px;
+  border: none;
+  border-radius: 8px;
+  background: #36d9ff;
+  color: #00111b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr 0.9fr;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .powers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-section {
+    grid-template-columns: 1fr;
+  }
+
+  .section-number {
+    opacity: 0.4;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 110px 20px 70px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin: auto;
+  }
+
+  .hero .eyebrow {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 75px;
+    letter-spacing: -4px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    min-height: 450px;
+  }
+
+  .auren-character {
+    width: 95%;
+    max-height: 500px;
+  }
+
+  .character-status {
+    right: 2%;
+    bottom: 5%;
+    font-size: 8px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .story-section,
+  .powers-section,
+  .personality-section,
+  .mission-section {
+    padding: 80px 20px;
+  }
+
+  .section-number {
+    top: 25px;
+    right: 20px;
+    font-size: 50px;
+  }
+
+  .story-section {
+    gap: 35px;
+  }
+
+  .powers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personality-box {
+    grid-template-columns: 1fr;
+    padding: 35px 25px;
+    gap: 35px;
+  }
+
+  .personality-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-section {
+    min-height: 550px;
+  }
+
+  .mission-section h2 {
+    font-size: 58px;
+  }
+
+  footer {
+    padding: 30px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chat-overlay {
+    padding: 12px;
+  }
+
+  .chat-window {
+    width: 100%;
+    height: 90vh;
+  }
+}/* USER CHAT MESSAGES */
+
+.user-message {
+  margin-left: auto;
+  margin-top: 12px;
+  background: rgba(54, 217, 255, 0.18);
+  border: 1px solid rgba(54, 217, 255, 0.25);
+  color: #e8faff;
+}
+
+/* FINAL REQUEST SUMMARY */
+
+.submission-summary {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid rgba(54, 217, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(54, 217, 255, 0.05);
+  color: #b8c8d8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.submission-summary strong {
+  display: block;
+  color: #36d9ff;
+  margin-bottom: 12px;
+}
+
+.submission-summary p {
+  margin: 5px 0;
+}
+
+.chat-complete {
+  padding: 16px;
+  text-align: center;
+  color: #36d9ff;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
