@@ -140,7 +140,7 @@ ${dateTime}
     });
   }
 });
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile("index.html", { root: "dist" });
 });
 
