@@ -108,10 +108,10 @@ app.post("/api/submit-request", async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
-      to: process.env.SUPPORT_EMAIL,
-      subject: "🦸 Someone Needs Your Help!",
-      text: `
+  from: process.env.SMTP_USER,
+  to: process.env.SUPPORT_EMAIL,
+  subject: "🦸 Someone Needs Your Help!",
+  text: `
 A new help request has been submitted through Auren.
 
 Name: ${name}
@@ -124,8 +124,8 @@ ${problem}
 
 Date & Time:
 ${dateTime}
-      `,
-    });
+  `,
+});
 
     res.json({
       success: true,
@@ -144,10 +144,10 @@ app.get("/{*splat}", (req, res) => {
   res.sendFile("index.html", { root: "dist" });
 });
 
-const PORT = process.env.PORT || 3001;
+export default app;
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Auren backend running on port ${PORT}`);
-});
-
-setInterval(() => {}, 1000);
+if (!process.env.VERCEL) {
+  app.listen(3001, () => {
+    console.log("Auren backend running on http://localhost:3001");
+  });
+}

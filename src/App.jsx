@@ -169,7 +169,7 @@ try {
   };
 
   // Send the request to the backend
-  const response = await fetch("/api/submit-request", {
+  const response = await fetch("http://localhost:3001/api/submit-request", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -184,7 +184,7 @@ try {
   }
 
   // Ask Auren AI to respond to the visitor
-  const aiResponse = await fetch("/api/chat", {
+  const aiResponse = await fetch("http://localhost:3001/api/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -308,7 +308,16 @@ try {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2 }}
           >
-
+<div className="energy-particles">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
             <motion.img
               src="/images/auren-character.png"
               alt="Auren superhero"
